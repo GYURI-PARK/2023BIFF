@@ -8,51 +8,48 @@
 import SwiftUI
 
 struct SubListView: View {
-    
-    let movieTitle: [String]
-    let movieEng: [String]
-    let directorNm: [String]
-    let directorEng: [String]
-    let runningTime: [Int]
+
+    let movie: Movie
     
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            
+
             VStack {
-                ForEach([movieTitle, movieEng], id: \.self) { title in
+                ForEach(movie.title, id: \.self) { title in
                     Button{
-                        
+
                     } label: {
                         VStack {
                             Rectangle()
                                 .frame(width: 350, height: 1)
                                 .foregroundColor(.white)
-                            
+
                             HStack {
                                 Image(systemName: "arrow.forward")
                                     .foregroundColor(.white)
-                                
+
                                 VStack {
-                                    Text(title[0])
+                                    Text(title)
                                         .foregroundColor(.white)
-                                    
-//                                    Text(title)
-//                                        .foregroundColor(.gray)
+
+                                    Text(movie.directorNm[0])
+                                        .foregroundColor(.gray)
                                 }
                             }
-                            
+
                             Rectangle()
                                 .frame(width: 350, height: 1)
                                 .foregroundColor(.white)
                         }
                     }
-                    
+
                 }
             }
         }
     }
 }
+
 
 //struct SubListView_Previews: PreviewProvider {
 //    static var previews: some View {

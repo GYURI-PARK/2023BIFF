@@ -20,22 +20,37 @@ struct MovieListView: View {
                 
                 List {
                     ForEach(vm.classifications) { classification in
-                        NavigationLink(destination: SubListView(movieTitle: classification.movieTitle, movieEng: classification.movieEng, directorNm: classification.directorNm, directorEng: classification.directorNm, runningTime: classification.runningTime))
-                        {
-                            VStack (alignment: .leading, spacing: 15){
-                                Text(classification.title)
-                                    .font(.title2)
-
-                                Text(classification.description)
-                                    .font(.caption)
+                        if let firstTitle = classification.movieTitle.first,
+                           let firstEng = classification.movieEng.first,
+                           let firstDirectorNm = classification.directorNm.first,
+                           let firstDirectorEng = classification.directorEng.first,
+                           let firstRunningTime = classification.runningTime.first {
+                            
+                            let movieSet = Movie(id: classification.id,
+                                                 title: [firstTitle],
+                                                 eng: [firstEng],
+                                                 directorNm: [firstDirectorNm],
+                                                 directorEng: [firstDirectorEng],
+                                                 runningTime: [firstRunningTime])
+                            
+                            
+                            NavigationLink(destination: SubListView(movie: movieSet))
+                            {
+                                VStack (alignment: .leading, spacing: 15){
+                                    Text(classification.title)
+                                        .font(.title2)
+                                    
+                                    Text(classification.description)
+                                        .font(.caption)
+                                }
                             }
                         }
-                        
                     }
                     .frame(maxHeight: 80)
                 }
                 .listStyle(.automatic)
             }
+            
         }
     }
 }
