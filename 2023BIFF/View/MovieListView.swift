@@ -20,7 +20,8 @@ struct MovieListView: View {
                 
                 List {
                     ForEach(vm.classifications) { classification in
-                        NavigationLink(destination: SubListView(items: ["Subitem 1", "Subitem 2", "Subitem 3"])) {
+                        NavigationLink(destination: SubListView(movieTitle: classification.movieTitle, movieEng: classification.movieEng, directorNm: classification.directorNm, directorEng: classification.directorNm, runningTime: classification.runningTime))
+                        {
                             VStack (alignment: .leading, spacing: 15){
                                 Text(classification.title)
                                     .font(.title2)
@@ -39,18 +40,8 @@ struct MovieListView: View {
     }
 }
 
-struct SubListView: View {
-    let items: [String]
-    
-    var body: some View {
-        List(items, id: \.self) { item in
-            Text(item)
-        }
-    }
-}
-
-struct MovieListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieListView()
-    }
-}
+//struct MovieListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MovieListView()
+//    }
+//}

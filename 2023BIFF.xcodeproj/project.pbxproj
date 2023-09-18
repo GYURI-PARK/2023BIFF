@@ -18,6 +18,9 @@
 		C1325A3C2AB768BF006F7E24 /* MyTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A3B2AB768BF006F7E24 /* MyTimeTableView.swift */; };
 		C1325A3E2AB7724C006F7E24 /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A3D2AB7724C006F7E24 /* Classification.swift */; };
 		C1325A402AB7769D006F7E24 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A3F2AB7769D006F7E24 /* MovieListViewModel.swift */; };
+		C1325A422AB847C6006F7E24 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A412AB847C6006F7E24 /* Movie.swift */; };
+		C1325A442AB84B6C006F7E24 /* SubListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */; };
+		C1325A462AB88BE6006F7E24 /* SubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A452AB88BE6006F7E24 /* SubListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		C1325A3B2AB768BF006F7E24 /* MyTimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimeTableView.swift; sourceTree = "<group>"; };
 		C1325A3D2AB7724C006F7E24 /* Classification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
 		C1325A3F2AB7769D006F7E24 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		C1325A412AB847C6006F7E24 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListViewModel.swift; sourceTree = "<group>"; };
+		C1325A452AB88BE6006F7E24 /* SubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 				C1325A372AB7685E006F7E24 /* MainTabView.swift */,
 				C1325A392AB768A9006F7E24 /* MovieListView.swift */,
 				C1325A3B2AB768BF006F7E24 /* MyTimeTableView.swift */,
+				C1325A452AB88BE6006F7E24 /* SubListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C1325A3F2AB7769D006F7E24 /* MovieListViewModel.swift */,
+				C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				C1325A3D2AB7724C006F7E24 /* Classification.swift */,
+				C1325A412AB847C6006F7E24 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1325A3C2AB768BF006F7E24 /* MyTimeTableView.swift in Sources */,
+				C1325A462AB88BE6006F7E24 /* SubListView.swift in Sources */,
 				C1325A2E2AB765B1006F7E24 /* _023BIFF.xcdatamodeld in Sources */,
 				C1325A2B2AB765B1006F7E24 /* Persistence.swift in Sources */,
 				C1325A3E2AB7724C006F7E24 /* Classification.swift in Sources */,
@@ -190,6 +200,8 @@
 				C1325A222AB765B0006F7E24 /* _023BIFFApp.swift in Sources */,
 				C1325A382AB7685E006F7E24 /* MainTabView.swift in Sources */,
 				C1325A3A2AB768A9006F7E24 /* MovieListView.swift in Sources */,
+				C1325A422AB847C6006F7E24 /* Movie.swift in Sources */,
+				C1325A442AB84B6C006F7E24 /* SubListViewModel.swift in Sources */,
 				C1325A402AB7769D006F7E24 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
