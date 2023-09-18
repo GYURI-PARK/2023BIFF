@@ -26,6 +26,8 @@ struct MovieListView: View {
                            classification.movieTitle.count == classification.runningTime.count {
                             
                             let id = classification.id
+                            let name = classification.title
+                            let description = classification.description
                             let title = classification.movieTitle
                             let eng = classification.movieEng
                             let directorNm = classification.directorNm
@@ -33,6 +35,8 @@ struct MovieListView: View {
                             let runningTime = classification.runningTime
                             
                             let movieSet = Movie(id: id,
+                                                 name: name,
+                                                 description: description,
                                                  title: title,
                                                  eng: eng,
                                                  directorNm: directorNm,

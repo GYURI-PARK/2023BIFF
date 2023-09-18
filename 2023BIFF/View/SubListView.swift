@@ -18,6 +18,18 @@ struct SubListView: View {
 
             VStack(alignment: .leading, spacing: 30) {
                 
+                VStack(alignment: .center) {
+                    Text(movie.name)
+                        .foregroundColor(.red)
+                        .font(.largeTitle)
+                        .padding(10)
+                    
+                    Text(movie.description)
+                        .foregroundColor(.gray)
+                        .font(.caption2)
+                }
+                .frame(width: 350)
+                
                 Rectangle()
                     .frame(width: 350, height: 1)
                     .foregroundColor(.white)
@@ -57,6 +69,7 @@ struct SubListView: View {
                         }
                     }
                 }
+                Spacer()
                 
             }
         }
