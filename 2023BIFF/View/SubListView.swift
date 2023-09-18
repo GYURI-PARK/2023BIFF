@@ -10,12 +10,14 @@ import SwiftUI
 struct SubListView: View {
 
     let movie: Movie
+    @ObservedObject private var vm = SubListViewModel()
 
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
 
             VStack(alignment: .leading, spacing: 30) {
+                
                 Rectangle()
                     .frame(width: 350, height: 1)
                     .foregroundColor(.white)
