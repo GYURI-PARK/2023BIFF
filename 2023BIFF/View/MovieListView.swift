@@ -55,11 +55,10 @@ struct MovieListView: View {
                         }
                     }
                 }
-//                .frame(maxHeight: 80)
             }
             .background(.black)
             .scrollContentBackground(.hidden)
-            .listStyle(.sidebar)
+            .listStyle(.automatic)
         }
         
     }

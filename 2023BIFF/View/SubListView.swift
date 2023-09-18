@@ -16,61 +16,66 @@ struct SubListView: View {
         ZStack {
             Color.black.ignoresSafeArea()
 
-            VStack(alignment: .leading, spacing: 30) {
-                
-                VStack(alignment: .center) {
-                    Text(movie.name)
-                        .foregroundColor(.red)
-                        .font(.largeTitle)
-                        .padding(10)
+            
+                VStack(alignment: .leading, spacing: 30) {
                     
-                    Text(movie.description)
-                        .foregroundColor(.gray)
-                        .font(.caption2)
-                }
-                .frame(width: 350)
-                
-                Rectangle()
-                    .frame(width: 350, height: 1)
-                    .foregroundColor(.white)
-                
-                ForEach(0..<movie.title.count, id: \.self) { index in
-                    Button{
-
-                    } label: {
-                        VStack(alignment: .leading, spacing: 30) {
-                            
-                            HStack(spacing: 30) {
-                                Image(systemName: "arrow.forward")
-                                    .foregroundColor(.white)
-                                
-                                VStack(alignment: .leading) {
-                                    Text(movie.title[index])
-                                        .foregroundColor(.white)
-
-                                    Text(movie.eng[index])
-                                        .foregroundColor(.gray)
-                                }
+                    VStack(alignment: .center) {
+                        Text(movie.name)
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .padding(10)
                         
+                        Text(movie.description)
+                            .foregroundColor(.gray)
+                            .font(.caption2)
+                    }
+                    .frame(width: 350)
+                    
+//                    Rectangle()
+//                        .frame(width: 350, height: 1)
+//                        .foregroundColor(.white)
+                    
+                    ScrollView {
+                        
+                    ForEach(0..<movie.title.count, id: \.self) { index in
+                        Button{
+                            
+                        } label: {
+                            VStack(alignment: .leading, spacing: 30) {
                                 
-                                VStack(alignment: .trailing) {
-                                    Text(movie.directorNm[index])
+                                HStack(spacing: 30) {
+                                    Image(systemName: "arrow.forward")
                                         .foregroundColor(.white)
-
-                                    Text(movie.directorEng[index])
-                                        .foregroundColor(.gray)
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text(movie.title[index])
+                                            .foregroundColor(.white)
+                                        
+                                        Text(movie.eng[index])
+                                            .foregroundColor(.gray)
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    VStack(alignment: .trailing) {
+                                        Text(movie.directorNm[index])
+                                            .foregroundColor(.white)
+                                        
+                                        Text(movie.directorEng[index])
+                                            .foregroundColor(.gray)
+                                    }
                                 }
+                                .frame(maxWidth: 350)
+                                
+                                Rectangle()
+                                    .frame(width: 350, height: 1)
+                                    .foregroundColor(.white)
                             }
-//                            .frame(maxWidth: 350)
-
-                            Rectangle()
-                                .frame(width: 350, height: 1)
-                                .foregroundColor(.white)
                         }
                     }
+                    Spacer()
+                    
                 }
-                Spacer()
-                
             }
         }
     }
