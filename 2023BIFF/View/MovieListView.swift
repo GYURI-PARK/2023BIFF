@@ -12,48 +12,52 @@ struct MovieListView: View {
     @ObservedObject private var vm = MovieListViewModel()
     
     var body: some View {
-        NavigationStack {
+        
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
             
-            ZStack {
-                Color.black
-                    .ignoresSafeArea()
-                
-                List {
+            List {
                     ForEach(vm.classifications) { classification in
-                        if let firstTitle = classification.movieTitle.first,
-                           let firstEng = classification.movieEng.first,
-                           let firstDirectorNm = classification.directorNm.first,
-                           let firstDirectorEng = classification.directorEng.first,
-                           let firstRunningTime = classification.runningTime.first {
+                        if classification.movieTitle.count > 0,
+                           classification.movieTitle.count == classification.movieEng.count,
+                           classification.movieTitle.count == classification.directorNm.count,
+                           classification.movieTitle.count == classification.directorEng.count,
+                           classification.movieTitle.count == classification.runningTime.count {
                             
-                            let movieSet = Movie(id: classification.id,
-                                                 title: [firstTitle],
-                                                 eng: [firstEng],
-                                                 directorNm: [firstDirectorNm],
-                                                 directorEng: [firstDirectorEng],
-                                                 runningTime: [firstRunningTime])
+                            let id = classification.id
+                            let title = classification.movieTitle
+                            let eng = classification.movieEng
+                            let directorNm = classification.directorNm
+                            let directorEng = classification.directorEng
+                            let runningTime = classification.runningTime
                             
+                            let movieSet = Movie(id: id,
+                                                 title: title,
+                                                 eng: eng,
+                                                 directorNm: directorNm,
+                                                 directorEng: directorEng,
+                                                 runningTime: runningTime)
                             
                             NavigationLink(destination: SubListView(movie: movieSet))
-                            {
-                                VStack (alignment: .leading, spacing: 15){
-                                    Text(classification.title)
-                                        .font(.title2)
-                                    
-                                    Text(classification.description)
-                                        .font(.caption)
-                                }
+                        {
+                            VStack (alignment: .leading, spacing: 15){
+                                Text(classification.title)
+                                    .font(.title2)
+                                
+                                Text(classification.description)
+                                    .font(.caption)
                             }
                         }
                     }
-                    .frame(maxHeight: 80)
                 }
-                .background(.black)
-                .scrollContentBackground(.hidden)
-                .listStyle(.sidebar)
+//                .frame(maxHeight: 80)
             }
-            
+            .background(.black)
+            .scrollContentBackground(.hidden)
+            .listStyle(.sidebar)
         }
+        
     }
 }
 
