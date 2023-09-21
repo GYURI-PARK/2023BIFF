@@ -31,10 +31,6 @@ struct SubListView: View {
                     }
                     .frame(width: 350)
                     
-//                    Rectangle()
-//                        .frame(width: 350, height: 1)
-//                        .foregroundColor(.white)
-                    
                     ScrollView {
                         
                     ForEach(0..<movie.title.count, id: \.self) { index in
