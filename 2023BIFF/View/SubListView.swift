@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct SubListView: View {
-
+    
     let movie: Movie
     @ObservedObject private var vm = SubListViewModel()
-
+    @State private var showModal = false
+    
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-
             
-                VStack(alignment: .leading, spacing: 30) {
+            VStack(alignment: .leading, spacing: 30) {
+                
+                VStack(alignment: .center) {
+                    Text(movie.name)
+                        .foregroundColor(.red)
+                        .font(.largeTitle)
+                        .padding(10)
                     
-                    VStack(alignment: .center) {
-                        Text(movie.name)
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .padding(10)
-                        
-                        Text(movie.description)
-                            .foregroundColor(.gray)
-                            .font(.caption2)
-                    }
-                    .frame(width: 350)
-                    
-                    ScrollView {
-                        
+                    Text(movie.description)
+                        .foregroundColor(.gray)
+                        .font(.caption2)
+                }
+                .frame(width: 350)
+                
+                ScrollView(showsIndicators: false) {
+        
                     ForEach(0..<movie.title.count, id: \.self) { index in
                         Button{
-                            
+                            self.showModal = true
                         } label: {
                             VStack(alignment: .leading, spacing: 30) {
                                 
@@ -67,6 +67,10 @@ struct SubListView: View {
                                     .frame(width: 350, height: 1)
                                     .foregroundColor(.white)
                             }
+                        }
+                        .sheet(isPresented: self.$showModal) {
+                            ModalView()
+                                .presentationDetents([.medium])
                         }
                     }
                     Spacer()

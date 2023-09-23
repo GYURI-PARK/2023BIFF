@@ -21,6 +21,7 @@
 		C1325A422AB847C6006F7E24 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A412AB847C6006F7E24 /* Movie.swift */; };
 		C1325A442AB84B6C006F7E24 /* SubListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */; };
 		C1325A462AB88BE6006F7E24 /* SubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A452AB88BE6006F7E24 /* SubListView.swift */; };
+		C1325A482ABF1775006F7E24 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A472ABF1775006F7E24 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		C1325A412AB847C6006F7E24 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListViewModel.swift; sourceTree = "<group>"; };
 		C1325A452AB88BE6006F7E24 /* SubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListView.swift; sourceTree = "<group>"; };
+		C1325A472ABF1775006F7E24 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				C1325A392AB768A9006F7E24 /* MovieListView.swift */,
 				C1325A3B2AB768BF006F7E24 /* MyTimeTableView.swift */,
 				C1325A452AB88BE6006F7E24 /* SubListView.swift */,
+				C1325A472ABF1775006F7E24 /* ModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				C1325A2E2AB765B1006F7E24 /* _023BIFF.xcdatamodeld in Sources */,
 				C1325A2B2AB765B1006F7E24 /* Persistence.swift in Sources */,
 				C1325A3E2AB7724C006F7E24 /* Classification.swift in Sources */,
+				C1325A482ABF1775006F7E24 /* ModalView.swift in Sources */,
 				C1325A242AB765B0006F7E24 /* ContentView.swift in Sources */,
 				C1325A222AB765B0006F7E24 /* _023BIFFApp.swift in Sources */,
 				C1325A382AB7685E006F7E24 /* MainTabView.swift in Sources */,
