@@ -202,18 +202,18 @@ class ClassificationList {
         Classification(id: 22,
                        title: "특별기획 프로그램 Ⅲ - 인도네시아 영화의 르네상스",
                        description: "올해 특별기획 프로그램 Ⅲ는 ‘인도네시아 영화의 르네상스’다.",
-                       movieTitle: ["괴물", "녹야", "더 비스트"],
-                       movieEng: ["Monster", "Green Night", "The Beast"],
-                       directorNm: ["고레에다 히로카즈", "한슈아이", "베르트랑 보넬로"],
-                       directorEng: ["KORE-EDA Hirokazu", "HAN Shuai", "Bertrand BONELLO"],
-                       runningTime: [126, 92, 146]),
+                       movieTitle: ["(불)건전한 연애", "가스퍼의 24시간", "리마 거리의 바니아", "바다가 나를 부른다", "바스리와 살마의 네버엔딩스토리", "사라의 수난", "사랑에 대해 이야기할 때 말하지 않는 것들", "시가렛 걸", "야생화가 꽃피는", "임페티고어", "자바섬으로의 순례", "춤추는 컬러"],
+                       movieEng: ["Posesif", "24 Hours with Gaspar", "Vania on Lima Street", "The Sea Calls for Me", "Basri &amp; Salma in a Never-Ending Comedy", "Sara", "What They Don′t Talk About When They Talk About Love", "Cigarette Girl", "Where the Wild Frangipanis Grow", "Impetigore", "Tales of the Otherwords", "Dancing Colors"],
+                       directorNm: ["에드윈", "요셉 앙기 노엔", "바유 프리한토로 필레몬", "툼팔 탐푸볼론", "코지 리잘", "이스마일 바스베스", "몰리 수리야", "카밀라 안디니, 이파 이스판샤", "니라타 바스 디왕카라", "조코 안와르", "BW 푸르바 네가라", "M. 레자 파흐리얀샤"],
+                       directorEng: ["Edwin", "Yosep Anggi NOEN", "Bayu Prihantoro FILEMON", "Tumpal TAMPUBOLON", "Khozy RIZAL", "Ismail BASBETH", "Mouly SURYA", "Kamila ANDINI, Ifa ISFANSYAH", "Nirartha Bas DIWANGKARA", "Joko ANWAR", "BW Purba NEGARA", "M. Reza FAHRIYANSYAH"],
+                       runningTime: [102, 98, 24, 18, 15, 99, 104, 116, 15, 107, 85, 15]),
         Classification(id: 23,
                        title: "특별상영",
                        description: "2023 부산국제영화제 특별상영작",
-                       movieTitle: ["괴물", "녹야", "더 비스트"],
-                       movieEng: ["Monster", "Green Night", "The Beast"],
-                       directorNm: ["고레에다 히로카즈", "한슈아이", "베르트랑 보넬로"],
-                       directorEng: ["KORE-EDA Hirokazu", "HAN Shuai", "Bertrand BONELLO"],
-                       runningTime: [126, 92, 146])
+                       movieTitle: ["류이치 사카모토: 오퍼스", "시", "안개"],
+                       movieEng: ["Ryuichi Sakamoto｜Opus", "Poetry", "Mist"],
+                       directorNm: ["소라 네오", "이창동", "김수용"],
+                       directorEng: ["SORA Neo", "LEE Chang-dong", "KIM Soo-yong"],
+                       runningTime: [103, 139, 79])
     ]
 }
