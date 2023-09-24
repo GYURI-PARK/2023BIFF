@@ -69,6 +69,7 @@ struct SubListView: View {
                             }
                         }
                         .sheet(isPresented: self.$showModal) {
+                            // MovieListView에서 넘어온 classification이랑 index를 받아서 modalview정보 변경하면 될듯...?
                             ModalView()
                                 .presentationDetents([.medium])
                         }

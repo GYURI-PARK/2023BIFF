@@ -17,7 +17,3 @@ class SubListViewModel: ObservableObject {
             self.classifications = classificationData
         }
 }
-
-// classification id와 movie id 같은지 확인 -> movie 의 배열 길이 추출 -> 배열 길이만큼 sublistview에서 반복되어야 됨
-
-

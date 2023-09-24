@@ -22,6 +22,7 @@
 		C1325A442AB84B6C006F7E24 /* SubListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */; };
 		C1325A462AB88BE6006F7E24 /* SubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A452AB88BE6006F7E24 /* SubListView.swift */; };
 		C1325A482ABF1775006F7E24 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A472ABF1775006F7E24 /* ModalView.swift */; };
+		C1325A4A2ABF485A006F7E24 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1325A492ABF485A006F7E24 /* Information.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		C1325A432AB84B6C006F7E24 /* SubListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListViewModel.swift; sourceTree = "<group>"; };
 		C1325A452AB88BE6006F7E24 /* SubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListView.swift; sourceTree = "<group>"; };
 		C1325A472ABF1775006F7E24 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		C1325A492ABF485A006F7E24 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				C1325A3D2AB7724C006F7E24 /* Classification.swift */,
 				C1325A412AB847C6006F7E24 /* Movie.swift */,
+				C1325A492ABF485A006F7E24 /* Information.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C1325A482ABF1775006F7E24 /* ModalView.swift in Sources */,
 				C1325A242AB765B0006F7E24 /* ContentView.swift in Sources */,
 				C1325A222AB765B0006F7E24 /* _023BIFFApp.swift in Sources */,
+				C1325A4A2ABF485A006F7E24 /* Information.swift in Sources */,
 				C1325A382AB7685E006F7E24 /* MainTabView.swift in Sources */,
 				C1325A3A2AB768A9006F7E24 /* MovieListView.swift in Sources */,
 				C1325A422AB847C6006F7E24 /* Movie.swift in Sources */,
