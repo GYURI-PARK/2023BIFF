@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ModalView: View {
+    @State var index: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Index: \(index)")
     }
 }
 
-struct ModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        ModalView()
-    }
-}
+//struct ModalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ModalView()
+//    }
+//}

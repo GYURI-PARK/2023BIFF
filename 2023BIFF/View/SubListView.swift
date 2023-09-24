@@ -12,6 +12,7 @@ struct SubListView: View {
     let movie: Movie
     @ObservedObject private var vm = SubListViewModel()
     @State private var showModal = false
+    @State var num: Int? = nil
     
     var body: some View {
         ZStack {
@@ -36,6 +37,7 @@ struct SubListView: View {
                     ForEach(0..<movie.title.count, id: \.self) { index in
                         Button{
                             self.showModal = true
+                            self.num = index
                         } label: {
                             VStack(alignment: .leading, spacing: 30) {
                                 
@@ -69,9 +71,12 @@ struct SubListView: View {
                             }
                         }
                         .sheet(isPresented: self.$showModal) {
-                            // MovieListView에서 넘어온 classification이랑 index를 받아서 modalview정보 변경하면 될듯...?
-                            ModalView()
-                                .presentationDetents([.medium])
+                            if num != nil {
+                                ModalView(index: num!)
+                                    .presentationDetents([.medium])
+                            } else {
+                                // Loading page 필요
+                            }
                         }
                     }
                     Spacer()
