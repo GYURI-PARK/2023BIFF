@@ -10,23 +10,21 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         
-        NavigationStack{
-            TabView {
-                MovieListView()
-                    .tabItem {
-                        Image(systemName: "1.square.fill")
-                        Text("LIST")
-                    }
-                
-                MyTimeTableView()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("MY")
-                    }
-            }
+        
+        TabView {
+            MovieListView()
+                .tabItem {
+                    Image(systemName: "1.square.fill")
+                    Text("LIST")
+                }
+            
+            MyTimeTableView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("MY")
+                }
         }
     }
-    
 }
 
 //struct MainTabView_Previews: PreviewProvider {
