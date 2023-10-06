@@ -14,7 +14,7 @@ struct MainTabView: View {
         TabView {
             MovieListView()
                 .tabItem {
-                    Image(systemName: "1.square.fill")
+                    Image(systemName: "list.bullet")
                     Text("LIST")
                 }
             
