@@ -46,9 +46,10 @@ struct MovieListView: View {
                                     Divider()
                                     
                                     HStack {
-                                        VStack(alignment: .leading, spacing: 9)  {
+                                        VStack(alignment: .leading, spacing: 7)  {
                                             Text(classification.title)
-                                                .font(.title2)
+                                                .font(.title3)
+                                                .fontWeight(.bold)
                                                 .multilineTextAlignment(.leading)
                                                 .foregroundColor(.black)
                                             
@@ -62,7 +63,8 @@ struct MovieListView: View {
                                         Image(systemName: "chevron.right")
                                             .font(Font.system(size: 30, weight: .light))
                                             .foregroundColor(.black)
-                                    }.frame(width: 300)
+                                    }
+                                    .padding(.horizontal, 20)
                                 }
                             }
                         }

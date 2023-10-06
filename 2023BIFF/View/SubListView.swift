@@ -18,17 +18,19 @@ struct SubListView: View {
         ZStack {
             Color.black.ignoresSafeArea()
             
-            VStack(alignment: .leading, spacing: 30) {
+            VStack(alignment: .center, spacing: 30) {
                 
                 VStack(alignment: .center) {
                     Text(movie.name)
                         .foregroundColor(.red)
-                        .font(.largeTitle)
+                        .font(.title3)
+                        .fontWeight(.bold)
                         .padding(10)
                     
                     Text(movie.description)
                         .foregroundColor(.gray)
-                        .font(.caption2)
+                        .font(.footnote)
+                        .padding(10)
                 }
                 .frame(width: 350)
                 
@@ -39,36 +41,43 @@ struct SubListView: View {
                             self.showModal = true
                             self.num = index
                         } label: {
-                            VStack(alignment: .leading, spacing: 30) {
+                            VStack(alignment: .leading, spacing: 15) {
                                 
                                 HStack(spacing: 30) {
+                            
                                     Image(systemName: "arrow.forward")
                                         .foregroundColor(.white)
                                     
                                     VStack(alignment: .leading) {
                                         Text(movie.title[index])
                                             .foregroundColor(.white)
+                                            .multilineTextAlignment(.leading)
                                         
                                         Text(movie.eng[index])
                                             .foregroundColor(.gray)
+                                            .lineLimit(1)
                                     }
                                     
                                     Spacer()
                                     
                                     VStack(alignment: .trailing) {
                                         Text(movie.directorNm[index])
+                                            .multilineTextAlignment(.leading)
                                             .foregroundColor(.white)
+                                            .lineLimit(2)
                                         
                                         Text(movie.directorEng[index])
                                             .foregroundColor(.gray)
+                                            .lineLimit(1)
                                     }
                                 }
-                                .frame(maxWidth: 350)
+                                .padding(10)
                                 
                                 Rectangle()
-                                    .frame(width: 350, height: 1)
+                                    .frame(width: UIScreen.main.bounds.width, height: 1)
                                     .foregroundColor(.white)
                             }
+                            .padding(3)
                         }
                         .sheet(isPresented: self.$showModal) {
                             if num != nil {
@@ -80,7 +89,6 @@ struct SubListView: View {
                         }
                     }
                     Spacer()
-                    
                 }
             }
         }
